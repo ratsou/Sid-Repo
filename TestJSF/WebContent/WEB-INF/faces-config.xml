@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+    version="2.1">
+
+	<managed-bean>
+        <managed-bean-name>testBean</managed-bean-name>
+        <managed-bean-class>com.sid.model.TestBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<navigation-rule>
+		<display-name>TestJSF</display-name>
+		<from-view-id>/Home.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/UserDetails.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>hello</from-outcome>
+			<to-view-id>/Hello.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>
